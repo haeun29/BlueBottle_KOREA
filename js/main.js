@@ -15,3 +15,8 @@ var swiper = new Swiper(".mySwiper", {
     freeMode: true,
 
   });
+
+
+AOS.init();
+
+

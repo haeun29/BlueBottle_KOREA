@@ -1,8 +1,9 @@
-/* @import url('http://fonts.cdnfonts.com/css/halis-gr'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
 
 :root { 
     --main-color : #01A0DC;
     --main-text-color : #575C62;
+    --header-hight: 100px;
 }
 
 * { 
@@ -20,22 +21,23 @@ ul {
     list-style-type: none;
 }
 
-body { 
-    src: 
-    url(../Halis-Font/Ahmet\ Altun\ -\ HalisGR-Book.otf),
-    url(../Halis-Font/Ahmet\ Altun\ -\ HalisGR-Bold.otf),
-    url(../Halis-Font/Ahmet\ Altun\ -\ HalisGR-Medium.otf),
-    url(../Halis-Font/Ahmet\ Altun\ -\ HalisGR-Regular.otf);
-
-    font-family: 'HalisGR', sans-serif;
-    color: var(--main-text-color);
-    background: #fff;
+@font-face {
+  font-family: 'HalisGR';
+  src: 
+  url(../Halis-Font/Ahmet\ Altun\ -\ HalisGR-Regular.otf), 
+  url(../Halis-Font/Ahmet\ Altun\ -\ HalisGR-Medium.otf),
+  url(../Halis-Font/Ahmet\ Altun\ -\ HalisGR-Book.otf);
 }
 
-
-
+body { 
+    font-family: 'HalisGR';
+    color: var(--main-text-color);
+    background: #fff;
+    
+}
+ 
 .container { 
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -46,14 +48,14 @@ header {
     height: 100px;
     background: #fff;
     border-bottom: 1px solid #CCCCCC;
-
+    /* position: fixed; */
+    z-index: 10;
 }
 
 header .container { 
-    width: 1440px;
+    max-width : 1440px;
     height: 100%;
     /* outline: 1px solid red; */
-  
     display: flex;
     align-items: center;
     position: relative;
@@ -87,24 +89,35 @@ header .logo {
 
 
 
-/* main-vanner */
+/* main-banner */
 
 
-#main-vanner { 
+#main-banner { 
     /* outline: 1px solid red; */
+    /* width: 100%; */
     height: 660px;
+    object-position: center;
 }
 
+
+
 .swiper {
-    width: 100%;
+    max-width: 1924px;
     height: 100%;
+    position: relative;
+    
   }
   
+
+  .swiper-wrapper {
+    position: absolute;
+    left: calc(50% - (1920px / 2));
+  }
   
   .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 1924px;
+    height: 660px;
     object-fit: contain;
   }
 
@@ -116,6 +129,8 @@ header .logo {
 
   /* main */
 
+
+
   main section h2 { 
     padding-top: 150px;
     padding-bottom: 150px;
@@ -124,14 +139,25 @@ header .logo {
     text-align: center;
   }
 
+  main .container { 
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
  #morning .col {
     display: flex;
+    width: 100%;
+    height: 100%;
+ }
+
+ #morning video { 
+  width: 50%;
  }
 
 
  #morning .col img{
     object-fit: contain;
+    width: 50%;
  }
  
  #morning > div:nth-child(3) {
@@ -158,10 +184,11 @@ header .logo {
  }
 
  #morning .col .info p { 
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     line-height: 35px;
     text-align: justify;
+    font-family: 'Noto Sans KR', sans-serif;
  }
 
  .detail-btn { 
@@ -175,10 +202,11 @@ header .logo {
     font-weight: 400;
     font-size: 16px;
     padding: 20px 125px;
+    font-family: 'Noto Sans KR', sans-serif;
  }
 
  .detail-btn:hover { 
-    background: rgba(87, 92, 98, 0.2);
+    background: rgba(87, 92, 98, 0.1);
  }
 
 
@@ -186,25 +214,35 @@ header .logo {
 
  #sus .content { 
     display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     margin-bottom: 150px;
+   
+ }
+
+ 
+ #sus .content .col {
+  width: calc(100% / 3);
+  padding-left: 40px;
+  padding-right: 40px;
  }
 
 
  #sus .content .col h4 { 
     font-weight: 400;
     font-size: 24px;
+    font-family: 'Noto Sans KR', sans-serif;
  }
 
+
  #sus .content .col p { 
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     text-align: justify;
+    font-family: 'Noto Sans KR', sans-serif;
  }
 
  #sus .content .col img { 
+   width: 100%;
     padding-top: 60px;
     padding-bottom: 50px;
  }
@@ -227,22 +265,27 @@ header .logo {
  }
 
  #cafe p { 
-    font-weight: 400;
+    font-weight: 300;
     font-size: 22px;
     text-align: center;
     padding-bottom: 60px;
+    font-family: 'Noto Sans KR', sans-serif;
  }
 
- .swiper2 {
-    /* width: 100%;
-    height: 100%; */
-    overflow: hidden;
-  }
+#cafe .scroller { 
+  display: flex;
+  overflow: hidden;
+}
 
-  .swiper-slide2 img {
-    display: block;
-    /* object-fit: cover; */
-  }
+#cafe .scroller a { 
+  display: block;
+}
+
+#cafe .scroller img { 
+  display: block;
+  height: 510px;
+  padding-right: 50px;
+}
 
   #cafe .detail-btn {
     margin: 0;
@@ -256,14 +299,14 @@ header .logo {
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
-    color: var(--main-text-color);
+    color: #808386;
     border-top: 1px solid #CCCCCC;
     margin-top: 150px;
   }
 
   footer h5 { 
     padding-bottom: 20px;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 20px;
   }
 
@@ -275,6 +318,7 @@ header .logo {
     font-size: 48px;
     margin-right: 40px;
     /* outline: 1px solid red; */
+    color: #808386;
   }
 
   footer .sns a:last-child {
@@ -289,10 +333,17 @@ header .logo {
   footer .footer-info a { 
     margin-right: 20px;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 300;
+    color: #808386;
+  }
+  footer .footer-info a:hover { 
+    color:var(--main-text-color);
+    font-weight: 700;
   }
 
   footer p { 
     font-weight: 400;
     font-size: 20px;
   }
+
+

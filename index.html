@@ -14,23 +14,23 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-  
+    <!--AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- style.css -->
     <link rel="stylesheet" href="./css/style.css">
 
- 
+
     <!-- jQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-
-
-
-
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -54,7 +54,7 @@
         </div>
     </header>
 
-    <div id="main-vanner" class="container">
+    <div id="main-banner">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -71,33 +71,51 @@
           </div>
     </div>
 
-    <main class="container">
-        <section id="morning">
-            <h2>FOR MORNING RITUALS</h2>
-            <div class="col">
-                <img src="./images/pourOver1.png" alt="pourover">
-                <div class="info">
-                    <h3>Pour Over</h3>
-                    <p>일상에서 잠시 여유를 가지고 푸어 오버의 순간을 즐겨보세요. 처음 물을 부은 후에 부풀어 오르는 커피, 그리고 커피의 향기를 머금고 올라오는 첫 스팀까지. 물을 붓는 속도와 흐름에 따라 커피의 최종적인 맛이 어떻게 달라지는지 느껴보세요.</p>
+    <main>
+        <div class="container">
+            <section id="morning">
+                <h2>FOR MORNING RITUALS</h2>
+                <div 
+                class="col"
+                data-aos="fade-up"
+                data-aos-duration="3000">
+                    <video 
+                        muted
+                        autoplay
+                        poster="./images/pourOver1.png">
+                        <source src="./images/pourOver.mp4" type="video/mp4">
+                    </video>
+                    <div class="info">
+                        <h3>Pour Over</h3>
+                        <p>일상에서 잠시 여유를 가지고 푸어 오버의 순간을 즐겨보세요. 처음 물을 부은 후에 부풀어 오르는 커피, 그리고 커피의 향기를 머금고 올라오는 첫 스팀까지. 물을 붓는 속도와 흐름에 따라 커피의 최종적인 맛이 어떻게 달라지는지 느껴보세요.</p>
+                    </div>
+                </div> <!--col-->
+                
+                <div 
+                class="col"
+                data-aos="fade-up"
+                data-aos-duration="1000">
+    
+                    <img src="./images/pourOver2.png" alt="pouroverkit">
+                    <div class="info">
+                        <h3>Blue Bottle<br>
+                            Pour Over Kit</h3>
+                        <p>푸어 오버 키트는 집에서 블루보틀 카페 품질의 커피를 즐기는 데 필요한 도구와 전문 지식을 제공합니다. </p>
+    
+                        <button class="detail-btn"><a href="#"> 자세히 보러가기 → </a></button>
+                    </div>
                 </div>
-            </div> <!--col-->
-            
-            <div class="col">
-                <img src="./images/pourOver2.png" alt="pouroverkit">
-                <div class="info">
-                    <h3>Blue Bottle<br>
-                        Pour Over Kit</h3>
-                    <p>푸어 오버 키트는 집에서 블루보틀 카페 품질의 커피를 즐기는 데 필요한 도구와 전문 지식을 제공합니다. </p>
-
-                    <button class="detail-btn"><a href="#"> 자세히 보러가기 → </a></button>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
+       
 
         <section id="sus" class="container">
             <h2>SUSTAINABILITY</h2>
 
-            <div class="content"> 
+            <div 
+            class="content"
+            data-aos="fade-up"
+            data-aos-duration="2000"> 
 
                 <div class="col">
                     <h4>지속 가능한 소싱</h4>
@@ -126,63 +144,44 @@
         <h2>OUR CAFE</h2>
         <p>가까운 블루보틀 매장을 방문해보세요</p>
         
-        <div class="swiper2 mySwiper2">
-            <div class="swiper-wrapper">
-
-              <div class="swiper-slide">
-                <a href="#">
-                    <img src="./images/cafe-jeju.png" alt="블루보틀제주">
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#">
-                    <img src="./images/cafe-ag.png" alt="블루보틀제주">
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#">
-                    <img src="./images/cafe-GM.png" alt="블루보틀제주">
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#">
-                    <img src="./images/cafe-han.png" alt="블루보틀제주">
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#">
-                    <img src="./images/cafe-hanok.png" alt="블루보틀제주">
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#">    
-                    <img src="./images/cafe-sam.png" alt="블루보틀제주">
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#">
-                    <img src="./images/cafe-seongsu.png" alt="블루보틀제주">
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#">
-                    <img src="./images/cafe-YD.png" alt="블루보틀제주">
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#">
-                    <img src="./images/cafe-yeok.png" alt="블루보틀제주">
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="scroller">
+            <a href="#">
+                <img src="./images/cafe-jeju.png" alt="블루보틀제주">
+            </a>
+         
+         <a href="#">
+                <img src="./images/cafe-ag.png" alt="블루보틀제주">
+            </a>
+         
+         <a href="#">
+                <img src="./images/cafe-GM.png" alt="블루보틀제주">
+            </a>
+         
+          <a href="#">
+                <img src="./images/cafe-han.png" alt="블루보틀제주">
+            </a>
+         
+          <a href="#">
+                <img src="./images/cafe-hanok.png" alt="블루보틀제주">
+            </a>
+          
+         <a href="#">    
+                <img src="./images/cafe-sam.png" alt="블루보틀제주">
+            </a>
+         
+         <a href="#">
+                <img src="./images/cafe-seongsu.png" alt="블루보틀제주">
+            </a>
+         
+         <a href="#">
+                <img src="./images/cafe-YD.png" alt="블루보틀제주">
+            </a>
+         
+         <a href="#">
+                <img src="./images/cafe-yeok.png" alt="블루보틀제주">
+            </a>
+       
+        </div>
 
           <button class="detail-btn"><a href="#"> 매장 찾으러 가기 → </a></button>
 
@@ -192,9 +191,9 @@
     <footer>
         <h5>CONNECT WITH US</h5>
         <div class="sns">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/bluebottlecoffee"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/bluebottle/"><i class="bi bi-instagram"></i></a>
+            <a href="https://twitter.com/bluebottleroast"><i class="bi bi-twitter"></i></a>
         </div>
         <div class="footer-info">
             <a href="#">Language</a>
