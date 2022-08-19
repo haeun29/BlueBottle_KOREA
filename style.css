@@ -294,9 +294,7 @@ position: relative;
   animation: movemove 60s linear infinite;
 }
 
-/* #cafe .banner_wraper .img-slide:hover { 
-  animation: none
-} */
+
 
 @keyframes movemove {
   from { transform: translateX(0); }
