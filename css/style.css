@@ -251,47 +251,75 @@ header .logo {
  /* our cafe */
 
  #cafe { 
-    padding-top: 60px;
-    background: #F0F0F0;
-    text-align: center;
- }
-
-
- #cafe h2 {
-    font-size: 30px;
-    font-weight: 500;
-
-    padding-bottom: 20px;
- }
-
- #cafe p { 
-    font-weight: 300;
-    font-size: 22px;
-    text-align: center;
-    padding-bottom: 60px;
-    font-family: 'Noto Sans KR', sans-serif;
- }
-
-#cafe .scroller { 
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #F0F0F0;
+  text-align: center;
   display: flex;
-  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-#cafe .scroller a { 
-  display: block;
+
+#cafe h2 {
+  font-size: 30px;
+  font-weight: 500;
+
+  padding-bottom: 20px;
 }
 
-#cafe .scroller img { 
-  display: block;
-  height: 510px;
-  padding-right: 50px;
+#cafe p { 
+  font-weight: 300;
+  font-size: 22px;
+  text-align: center;
+  padding-bottom: 60px;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
-  #cafe .detail-btn {
-    margin: 0;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
+#cafe .banner_wraper  { 
+display: flex;
+overflow: hidden;
+width: 100%;
+position: relative;
+}
+
+
+#cafe .banner_wraper .img-slide { 
+  display: flex;
+  /* position: absolute;
+  width: 100px;
+  height: 100px; */
+  animation: movemove 60s linear infinite;
+}
+
+
+
+@keyframes movemove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+
+
+#cafe .banner_wraper .img-slide a { 
+display: block;
+}
+
+#cafe .banner_wraper .img-slide img { 
+display: block;
+height: 510px;
+padding-right: 50px;
+
+}
+
+#cafe .detail-btn {
+  margin-top: 60px;
+}
+
+
+
 
   /* footer */
 
